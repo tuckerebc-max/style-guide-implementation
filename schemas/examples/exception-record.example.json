@@ -1,0 +1,17 @@
+{
+  "exception_id": "EXC-SGI-example-001",
+  "rule_id": "SGI-TERM-001",
+  "deviation": "Use an approved local term variant in the named chapter component.",
+  "scope": {
+    "chapters": ["CH-EXAMPLE"],
+    "components": ["body"],
+    "stages": ["copyedit_prep"],
+    "language_profile": "MWM-LANGUAGE-PROFILE-UNSET"
+  },
+  "rationale": "Example record only; the project decision has not been supplied.",
+  "owner": "MWM editorial authority",
+  "effective_from": "2026-08-13",
+  "expires_or_review_by": "decision required",
+  "status": "proposed",
+  "decision_log_id": "MWM-DECISION-UNSET"
+}

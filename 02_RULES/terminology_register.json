@@ -1,0 +1,9 @@
+{
+  "register_id":"MWM-SGI-TERMS",
+  "version":"0.1.0",
+  "status":"awaiting-mwm-terms",
+  "policy":"Do not invent preferred or prohibited terminology. Empty or unresolved records produce review work, not automatic replacements.",
+  "term_statuses":["preferred","permitted","discouraged","prohibited","unknown","protected"],
+  "terms":[],
+  "record_template":{"term_id":"TERM-000","preferred_term":null,"variants":[],"definition":null,"scope":{"document_types":[],"components":[],"audiences":[]},"protected_contexts":["direct_quotation","formal_title","source_terminology"],"rationale":null,"source_evidence":[],"decision_owner":null,"status":"unknown","effective_from":null,"review_by":null,"test_cases":[]}
+}

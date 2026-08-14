@@ -1,0 +1,38 @@
+{
+  "finding_id": "SGI-finding-example-001",
+  "skill_id": "SGI-05",
+  "rule_id": "SGI-TERM-002",
+  "rule_version": "0.1.0",
+  "severity": "high",
+  "policy_status": "required",
+  "status": "needs_review",
+  "action": "ESCALATE",
+  "confidence": 0.98,
+  "location": {
+    "file": "example-chapter.docx",
+    "locator": "p. 4, paragraph 2",
+    "context_type": "body"
+  },
+  "observed_text": "[term withheld pending decision]",
+  "expected_treatment": "Do not replace an unknown domain term from model inference.",
+  "authority": {
+    "tier": 1,
+    "source_id": "MWM-SGI-SPEC",
+    "locator": "§17"
+  },
+  "exception_check": {
+    "matching_exception": null,
+    "protected_text": false,
+    "scope_match": true
+  },
+  "evidence": [
+    {"type": "text_locator", "locator": "p. 4, paragraph 2", "description": "Exact observed unit."},
+    {"type": "term_register", "locator": "TERM-example-001", "description": "Term status is unknown."}
+  ],
+  "reason": "The term is not resolved in the active register; subject-matter or editorial review is required.",
+  "proposed_change": null,
+  "owner": "Scholarly/Editorial Integrity or MWM editorial authority",
+  "dependencies": ["TERM-example-001"],
+  "human_decision": null,
+  "decision_log_id": null
+}

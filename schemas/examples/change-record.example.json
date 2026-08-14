@@ -1,0 +1,16 @@
+{
+  "change_id": "SGI-CHANGE-example-001",
+  "rule_ids": ["SGI-TERM-001"],
+  "change_type": "clarification",
+  "old_behavior": "Term statuses were not distinguished in the report.",
+  "new_behavior": "The report records status before selecting an action.",
+  "rationale": "Preserve the specification's policy-status boundary.",
+  "authority": "MWM-SGI-SPEC §9",
+  "effective_from": "decision required",
+  "affected_surfaces": ["body", "headings"],
+  "affected_chapters": ["all chapters — impact review required"],
+  "fixtures_added_or_changed": ["FX-ERR-004", "FX-ADV-002", "FX-INT-004"],
+  "owner": "MWM editorial authority",
+  "rollback_condition": "Rollback if the approved decision changes status semantics.",
+  "impact_review": "Pending project decision."
+}

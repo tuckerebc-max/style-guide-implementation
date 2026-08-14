@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://mwm.local/schemas/sgi/exception-record.schema.json",
+  "title":"MWM SGI Exception Record",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["exception_id","rule_id","deviation","scope","rationale","owner","effective_from","expires_or_review_by","status","decision_log_id"],
+  "properties":{
+    "exception_id":{"type":"string","pattern":"^EXC-SGI-[A-Za-z0-9._-]+$"},
+    "rule_id":{"type":"string","pattern":"^SGI-[A-Z0-9-]+$"},
+    "deviation":{"type":"string","minLength":1},
+    "scope":{"type":"object","required":["chapters","components","stages","language_profile"],"properties":{"chapters":{"type":"array","items":{"type":"string"}},"components":{"type":"array","items":{"type":"string"}},"stages":{"type":"array","items":{"type":"string"}},"language_profile":{"type":"string"}}},
+    "rationale":{"type":"string","minLength":1},
+    "owner":{"type":"string","minLength":1},
+    "effective_from":{"type":"string"},
+    "expires_or_review_by":{"type":["string","null"]},
+    "status":{"type":"string","enum":["proposed","approved","expired","revoked"]},
+    "decision_log_id":{"type":"string","minLength":1}
+  }
+}

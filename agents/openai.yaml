@@ -1,0 +1,7 @@
+interface:
+  display_name: "Style-Guide Implementation"
+  short_description: "Versioned MWM style compliance"
+  default_prompt: "Use $style-guide-implementation to apply the active MWM style rules with evidence, scope, and exceptions."
+
+policy:
+  allow_implicit_invocation: true

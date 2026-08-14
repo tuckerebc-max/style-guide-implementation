@@ -1,0 +1,26 @@
+{
+  "run_id": "MWM-SGI-example-001",
+  "specification_id": "MWM-SGI-SPEC",
+  "specification_version": "0.1.0-draft",
+  "project_profile": "MWM-Editorial-Profile-UNSET",
+  "rule_registry_version": "MWM-SGI-RULES@0.1.0",
+  "stage": "intake",
+  "surfaces": ["body", "headings"],
+  "preconditions": "partial",
+  "coverage": "partial",
+  "summary": {
+    "units_reviewed": 12,
+    "rules_applied": 8,
+    "findings_total": 1,
+    "required_violations": 0,
+    "conflicts": 0,
+    "exceptions_applied": 0,
+    "escalations": 1,
+    "blocking_findings": 0
+  },
+  "release_status": "ready_with_conditions",
+  "evaluation_set": "MWM-SGI-EVAL-01@0.1.0",
+  "findings": [],
+  "maintenance_changes": [],
+  "decision_records": ["MWM-DECISION-UNSET"]
+}

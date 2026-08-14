@@ -1,0 +1,14 @@
+{
+  "integration_set_id":"MWM-SGI-INTEGRATION-01",
+  "version":"0.1.0",
+  "cases":[
+    {"fixture_id":"FX-INT-001","sequence":["load_profile","parse_surfaces","apply_rules","check_exceptions","run_consistency","release_gate"],"assertions":["coverage high","required rules testable","release_status=ready"]},
+    {"fixture_id":"FX-INT-002","sequence":["apply_required_rule","check_exception","release_gate"],"assertions":["unapproved violation remains","release_status=not_ready"]},
+    {"fixture_id":"FX-INT-003","sequence":["compare_authorities","preserve_alternatives","create_decision_request","release_gate"],"assertions":["conflict not silently blended","release_status=not_ready"]},
+    {"fixture_id":"FX-INT-004","sequence":["change_record","impact_review","fixtures","activate"],"assertions":["change gate passes","release_status=ready"]},
+    {"fixture_id":"FX-INT-005","sequence":["parse_surfaces","coverage_gate","release_gate"],"assertions":["partial coverage blocks release"]},
+    {"fixture_id":"FX-INT-006","sequence":["apply_style_rule","classify_owner","handoff_copyediting"],"assertions":["SGI does not rewrite sentence"]},
+    {"fixture_id":"FX-INT-007","sequence":["parse_caption","classify_owner","handoff_technical_editing"],"assertions":["SGI does not adjudicate technical object"]},
+    {"fixture_id":"FX-INT-008","sequence":["change_impact","affected_chapters","fixture_gate","release_gate"],"assertions":["global change remains blocked until impact evidence exists"]}
+  ]
+}

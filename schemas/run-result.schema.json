@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://mwm.local/schemas/sgi/run-result.schema.json",
+  "title":"MWM SGI Compliance Run Result",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["run_id","specification_id","specification_version","project_profile","rule_registry_version","stage","surfaces","preconditions","coverage","summary","release_status","evaluation_set","findings","maintenance_changes"],
+  "properties":{
+    "run_id":{"type":"string"},
+    "specification_id":{"const":"MWM-SGI-SPEC"},
+    "specification_version":{"type":"string"},
+    "project_profile":{"type":"string"},
+    "rule_registry_version":{"type":"string"},
+    "stage":{"type":"string","enum":["intake","copyedit_prep","production","proof"]},
+    "surfaces":{"type":"array","items":{"type":"string"}},
+    "preconditions":{"type":"string","enum":["pass","partial","fail"]},
+    "coverage":{"type":"string","enum":["high","partial","low"]},
+    "summary":{"type":"object","additionalProperties":false,"required":["units_reviewed","rules_applied","findings_total","required_violations","conflicts","exceptions_applied","escalations","blocking_findings"],"properties":{"units_reviewed":{"type":"integer","minimum":0},"rules_applied":{"type":"integer","minimum":0},"findings_total":{"type":"integer","minimum":0},"required_violations":{"type":"integer","minimum":0},"conflicts":{"type":"integer","minimum":0},"exceptions_applied":{"type":"integer","minimum":0},"escalations":{"type":"integer","minimum":0},"blocking_findings":{"type":"integer","minimum":0}}},
+    "release_status":{"type":"string","enum":["ready","ready_with_conditions","not_ready"]},
+    "evaluation_set":{"type":"string"},
+    "findings":{"type":"array","items":{"$ref":"finding.schema.json"}},
+    "maintenance_changes":{"type":"array","items":{"$ref":"change-record.schema.json"}},
+    "decision_records":{"type":"array","items":{"type":"string"}}
+  }
+}

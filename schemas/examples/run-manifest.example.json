@@ -1,0 +1,12 @@
+{
+  "run_id": "MWM-SGI-example-001",
+  "manuscript_file": "example-chapter.docx",
+  "manuscript_version": "draft-01",
+  "project_profile": "MWM-Editorial-Profile-UNSET",
+  "rule_registry_version": "MWM-SGI-RULES@0.1.0",
+  "exception_register": "MWM-SGI-EXCEPTIONS@UNSET",
+  "stage": "intake",
+  "surfaces": ["body", "headings", "tables", "quotations", "references"],
+  "language_profile": "MWM-LANGUAGE-PROFILE-UNSET",
+  "prior_run_id": null
+}

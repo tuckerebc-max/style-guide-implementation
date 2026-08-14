@@ -1,0 +1,23 @@
+{
+  "term_id": "TERM-example-001",
+  "preferred_term": null,
+  "variants": [
+    {"term": "observed domain term", "status": "unknown", "rationale": "Requires editorial or subject-matter decision."}
+  ],
+  "definition": null,
+  "scope": {
+    "document_types": ["chapter"],
+    "components": ["body"],
+    "audiences": ["editorial-team"]
+  },
+  "protected_contexts": ["quotation", "formal_title", "proper_name"],
+  "rationale": "Example record only; no MWM terminology decision is asserted.",
+  "source_evidence": [
+    {"source_id": "MWM-TERM-DECISION-UNSET", "locator": "decision required"}
+  ],
+  "decision_owner": "MWM editorial authority",
+  "status": "draft",
+  "effective_from": null,
+  "review_by": null,
+  "test_cases": ["FX-ERR-009", "FX-NEG-002"]
+}

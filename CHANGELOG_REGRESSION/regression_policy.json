@@ -1,0 +1,19 @@
+{
+  "policy_id":"MWM-SGI-REGRESSION-POLICY",
+  "version":"0.1.0",
+  "principles":[
+    "Every production failure is captured before the package is changed.",
+    "A reproducible regression receives a fixture or a documented reason why a fixture is not appropriate.",
+    "A rule or specification change records authority, scope, impact, decision hooks, and rollback conditions.",
+    "A failing zero-tolerance fixture blocks release until repaired and re-scored.",
+    "Unresolved MWM policy remains a decision hook; regression repair may not silently decide it."
+  ],
+  "severity_response":{
+    "critical":"contain immediately, hold release or rollback, notify owner, add regression fixture",
+    "high":"triage before next release, add or amend fixture, require verification",
+    "medium":"schedule repair and monitor, add fixture when behavior is reproducible",
+    "low":"record and review in maintenance cycle"
+  },
+  "required_artifacts":["regression_intake","production_failure_when_applicable","affected_rule_or_hook","fixture_result","changelog_entry"],
+  "release_rule":"No unresolved critical or high regression, stale exception, protected-text failure, silent authority substitution, or false PASS may ship."
+}

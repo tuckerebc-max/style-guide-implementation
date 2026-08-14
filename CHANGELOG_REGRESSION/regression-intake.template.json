@@ -1,0 +1,19 @@
+{
+  "regression_id": "SGI-REG-example-001",
+  "reported_at": "2026-08-13",
+  "reported_by": "editorial QA",
+  "source": "fixture",
+  "trigger": "Describe the rule, decision, handoff, or release condition that exposed the failure.",
+  "fixture_or_run_id": "FX-ERR-001",
+  "observed_behavior": "Describe what the package did.",
+  "expected_behavior": "Describe the expected behavior grounded in the specification and active rule.",
+  "severity": "high",
+  "status": "open",
+  "owner": "MWM editorial authority",
+  "affected_rule_ids": ["SGI-RULE-001"],
+  "affected_decision_hooks": [],
+  "reproduction": ["Run the fixture or provide the smallest reproducible input."],
+  "resolution": "Pending triage; no policy change is implied.",
+  "replacement_fixture_ids": [],
+  "verified_at": null
+}

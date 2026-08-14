@@ -1,0 +1,24 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://mwm.local/schemas/sgi/change-record.schema.json",
+  "title":"MWM SGI Rule Change Record",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["change_id","rule_ids","change_type","old_behavior","new_behavior","rationale","authority","effective_from","affected_surfaces","affected_chapters","fixtures_added_or_changed","owner","rollback_condition"],
+  "properties":{
+    "change_id":{"type":"string","pattern":"^SGI-CHANGE-[A-Za-z0-9._-]+$"},
+    "rule_ids":{"type":"array","minItems":1,"items":{"type":"string","pattern":"^SGI-[A-Z0-9-]+$"}},
+    "change_type":{"type":"string","enum":["new","clarification","correction","deprecation","scope_change"]},
+    "old_behavior":{"type":"string"},
+    "new_behavior":{"type":"string"},
+    "rationale":{"type":"string"},
+    "authority":{"type":"string"},
+    "effective_from":{"type":"string"},
+    "affected_surfaces":{"type":"array","items":{"type":"string"}},
+    "affected_chapters":{"type":"array","items":{"type":"string"}},
+    "fixtures_added_or_changed":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "owner":{"type":"string"},
+    "rollback_condition":{"type":"string"},
+    "impact_review":{"type":["string","null"]}
+  }
+}

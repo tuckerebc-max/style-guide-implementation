@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://mwm.local/schemas/sgi/terminology-record.schema.json",
+  "title":"MWM SGI Terminology Record",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["term_id","preferred_term","variants","scope","protected_contexts","source_evidence","status","effective_from","review_by","test_cases"],
+  "properties":{
+    "term_id":{"type":"string","pattern":"^TERM-[A-Za-z0-9._-]+$"},
+    "preferred_term":{"type":["string","null"]},
+    "variants":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["term","status"],"properties":{"term":{"type":"string"},"status":{"type":"string","enum":["preferred","permitted","discouraged","prohibited","unknown","protected"]},"rationale":{"type":["string","null"]}}}},
+    "definition":{"type":["string","null"]},
+    "scope":{"type":"object","required":["document_types","components","audiences"],"properties":{"document_types":{"type":"array","items":{"type":"string"}},"components":{"type":"array","items":{"type":"string"}},"audiences":{"type":"array","items":{"type":"string"}}}},
+    "protected_contexts":{"type":"array","items":{"type":"string"}},
+    "rationale":{"type":["string","null"]},
+    "source_evidence":{"type":"array","items":{"type":"object","required":["source_id","locator"],"properties":{"source_id":{"type":"string"},"locator":{"type":"string"}}}},
+    "decision_owner":{"type":["string","null"]},
+    "status":{"type":"string","enum":["active","draft","retired"]},
+    "effective_from":{"type":["string","null"]},
+    "review_by":{"type":["string","null"]},
+    "test_cases":{"type":"array","items":{"type":"string"}}
+  }
+}

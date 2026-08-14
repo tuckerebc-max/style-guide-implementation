@@ -1,0 +1,19 @@
+{
+  "failure_id": "SGI-PF-example-001",
+  "detected_at": "2026-08-13",
+  "chapter_or_asset": "example-chapter.docx",
+  "run_id": "MWM-SGI-example-001",
+  "stage": "production",
+  "failure_class": "scope_leak",
+  "impact": "contained",
+  "containment": "Hold the affected handoff and preserve the pre-change artifact.",
+  "evidence": [
+    {"type": "run_result", "locator": "MWM-SGI-example-001", "description": "Recorded result and finding ledger."}
+  ],
+  "release_effect": "hold",
+  "owner": "MWM editorial authority",
+  "related_regression_ids": ["SGI-REG-example-001"],
+  "affected_rule_ids": ["SGI-ROUTE-001"],
+  "follow_up": "Reproduce, add or amend a fixture, and verify the handoff contract before release.",
+  "closed_at": null
+}

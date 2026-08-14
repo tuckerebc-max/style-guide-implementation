@@ -1,0 +1,38 @@
+{
+  "rule_id": "SGI-TERM-001",
+  "version": "0.1.0",
+  "label": "Terminology status distinctions",
+  "authority": {
+    "tier": 1,
+    "source_id": "MWM-SGI-SPEC",
+    "locator": "§9 and §17",
+    "adopted_by": "MWM editorial authority — pending confirmation"
+  },
+  "policy_status": "required",
+  "lifecycle_state": "active",
+  "scope": {
+    "document_types": ["chapter"],
+    "components": ["body", "headings", "tables", "captions"],
+    "stages": ["intake", "copyedit_prep", "production", "proof"],
+    "language_profile": "MWM-LANGUAGE-PROFILE-UNSET",
+    "audiences": ["editorial-team"]
+  },
+  "trigger": "A terminology record is used in an inspected surface.",
+  "preferred_action": "FLAG or ESCALATE according to term status and evidence.",
+  "protected_text": ["quotations", "formal_titles", "proper_names", "source_terminology"],
+  "exceptions": ["An approved, scoped exception record may alter treatment."],
+  "rationale": "Status must be explicit before enforcement strength is assigned.",
+  "examples": {
+    "compliant": ["The report distinguishes preferred and protected contexts."],
+    "noncompliant": ["An unknown term is replaced from model inference."],
+    "boundary": ["A source term inside a quotation is preserved."]
+  },
+  "source_evidence": [
+    {"source_id": "MWM-SGI-SPEC", "locator": "§9", "retrieved_at": "2026-08-13"}
+  ],
+  "decision_owner": "MWM editorial authority",
+  "effective_from": null,
+  "review_by": null,
+  "test_cases": ["FX-CLEAN-003", "FX-ERR-009", "FX-ADV-006", "FX-NEG-002"],
+  "change_history": ["Initial SGI package draft; policy decision remains open where marked."]
+}
